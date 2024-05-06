@@ -1,0 +1,66 @@
+.statistics {
+  padding: rem(24) rem(48);
+  background-color: $green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: rem(80);
+
+  @include responsive(T) {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(48) rem(48);
+    margin-top: rem(160);
+  }
+
+  @include responsive(D) {
+    padding: rem(70) rem(160);
+  }
+
+  .title {
+    @include h3;
+    color: $white;
+    text-align: center;
+  }
+
+  &__content {
+    margin-top: rem(56);
+    text-align: center;
+    gap: rem(24);
+
+    @include responsive(T) {
+      gap: rem(64);
+      margin-top: 0;
+    }
+
+    .shame {
+      font-weight: 600;
+      font-size: rem(32);
+      line-height: rem(36);
+      color: $white;
+
+      @include responsive(T) {
+        @include h2;
+      }
+
+      span {
+        @include b1;
+
+        @include responsive(T) {
+          @include h3;
+        }
+      }
+    }
+
+    .description {
+      @include b4;
+      color: $white;
+      margin-top: rem(12);
+
+      @include responsive(T) {
+        @include b3;
+      }
+    }
+  }
+}

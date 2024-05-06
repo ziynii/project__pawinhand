@@ -1,0 +1,35 @@
+.section-title {
+  text-align: center;
+  margin-top: rem(80);
+
+  @include responsive(T) {
+    margin-top: rem(160);
+  }
+
+  .title {
+    @include h4;
+    color: $grey700;
+
+    @include responsive(T) {
+      @include h3;
+    }
+
+    @include responsive(T) {
+      @include h2;
+    }
+  }
+
+  .description {
+    @include b4;
+    color: $grey600;
+    margin-top: rem(24);
+
+    @include responsive(T) {
+      @include b3;
+    }
+
+    @include responsive(D) {
+      @include b2;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-list {
+    display: flex;
+    justify-content: center;
+    gap: rem(8);
+    margin-top: rem(60);
+
+    @include responsive(T) {
+      gap: rem(16);
+      margin-top: rem(80);
+    }
+
+    .preview {
+      width: vw(42);
+      height: vw(42);
+      max-width: rem(100);
+      max-height: rem(100);
+
+      .pet-img {
+        &.review__btn-active {
+          filter: brightness(60%);
+          box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &-content {
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-top: rem(40);
+
+      @include responsive(T) {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: rem(32);
+        margin-top: rem(60);
+      }
+
+      .chat-box {
+        @include b2;
+        color: $white;
+
+        min-height: rem(180);
+        border-radius: rem(32);
+        background-color: $beige;
+        padding: rem(40) rem(16);
+        display: flex;
+        align-items: center;
+        position: relative;
+        max-width: rem(572);
+
+        &::after {
+          top: 100%;
+          left: 85%;
+          border: solid transparent;
+          content: "";
+          height: 0;
+          width: 0;
+          position: absolute;
+          pointer-events: none;
+          border-color: rgba(136, 183, 213, 0);
+          border-top-color: $beige;
+          border-width: rem(15);
+          margin-left: rem(-15);
+          margin-top: 0;
+        }
+
+        @include responsive(T) {
+          &::after {
+            left: 100%;
+            top: 25%;
+            border: solid transparent;
+            content: "";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(136, 183, 213, 0);
+            border-left-color: $beige;
+            border-width: rem(15);
+            margin-top: rem(-30);
+            margin-left: 0;
+          }
+        }
+      }
+
+      .select-list {
+        margin-top: rem(38);
+        width: vw(100);
+        height: vw(100);
+        max-width: rem(160);
+        max-height: rem(160);
+        border: rem(5) solid $white;
+        border-radius: 100%;
+        box-shadow: $shadow-6px;
+      }
+    }
+  }
+}

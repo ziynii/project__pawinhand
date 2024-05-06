@@ -1,0 +1,100 @@
+.header {
+  display: flex;
+  align-items: center;
+  height: rem(84);
+  padding: 0 rem(8);
+  box-shadow: $shadow-8px;
+  background-color: $white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $header-level;
+
+  @include responsive(D) {
+    padding: 0 rem(32);
+  }
+
+  &__logo {
+    @include bg("logo.svg", center);
+    width: rem(185);
+    height: rem(48);
+  }
+
+  &__gnb {
+    margin-left: rem(60);
+    display: flex;
+    align-items: center;
+    gap: rem(32);
+
+    &__item {
+      @include b3;
+      a {
+        color: $grey700;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+
+    &--mobile {
+      display: none;
+      position: fixed;
+      top: rem(84);
+      left: 0;
+      background-color: $white;
+      width: 100%;
+      padding: rem(36) 0;
+      gap: rem(24);
+      flex-direction: column;
+      align-items: center;
+      box-shadow: $shadow-4px;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: rem(16);
+        text-align: center;
+      }
+    }
+  }
+
+  &__btn {
+    &-menu {
+      @include bg("ico_menu.svg", center);
+      width: rem(24);
+      height: rem(24);
+    }
+
+    &-close {
+      display: none;
+      @include bg("ico_close.svg", center);
+      width: rem(24);
+      height: rem(24);
+    }
+
+    &-donate {
+      padding: rem(8) rem(16);
+      border-radius: rem(36);
+      background-color: $orange;
+      color: $white;
+      border: rem(1) solid $orange;
+      transition: 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba($color: $orange, $alpha: 0.8);
+      }
+
+      .donate-btns & {
+        margin-right: rem(8);
+      }
+
+      &.outline {
+        background-color: $white;
+        color: $orange;
+      }
+    }
+  }
+}

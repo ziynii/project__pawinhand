@@ -1,0 +1,159 @@
+.campaign {
+  &__contents {
+    display: flex;
+    flex-flow: column;
+    gap: rem(32);
+    margin-top: rem(48);
+    align-items: center;
+
+    @include responsive(T) {
+      gap: rem(68);
+    }
+
+    @include responsive(D) {
+      flex-flow: row;
+      justify-content: center;
+      gap: rem(92);
+      margin-top: rem(120);
+    }
+
+    .campaign__content {
+      max-width: rem(366);
+      padding: rem(33) rem(12);
+      border-radius: rem(24);
+      box-shadow: $shadow-8px;
+      gap: rem(12);
+      align-items: center;
+      position: relative;
+
+      @include responsive(T) {
+        width: 100%;
+        max-width: rem(592);
+        gap: rem(48);
+        padding: rem(40) rem(12);
+
+        &.reverse {
+          flex-direction: row-reverse;
+
+          .campaign__content {
+            &__text {
+              margin-left: 0;
+              margin-right: rem(160);
+              text-align: right;
+            }
+          }
+        }
+      }
+
+      @include responsive(D) {
+        flex-flow: column;
+        width: rem(232);
+        height: rem(460);
+        align-items: flex-start;
+
+        &.reverse {
+          flex-direction: column;
+
+          .campaign__content {
+            &__text {
+              margin-left: 0;
+              margin-right: rem(0);
+              text-align: left;
+            }
+          }
+        }
+      }
+
+      &__thumb {
+        &.campaign01 {
+          @include bg("campaign01.png", center);
+          @include position(left, -52px, top, -8px);
+          background-size: cover;
+          width: rem(200);
+          height: rem(200);
+
+          @include responsive(D) {
+            @include position(left, -52px, top, -48px);
+            background-size: cover;
+            width: rem(350);
+            height: rem(350);
+          }
+        }
+
+        &.campaign02 {
+          @include bg("campaign02.png", center);
+          @include position(right, -36px, top, -8px);
+          background-size: cover;
+          width: rem(200);
+          height: rem(200);
+
+          @include responsive(D) {
+            @include position(left, -52px, top, -48px);
+            background-size: cover;
+            width: rem(350);
+            height: rem(350);
+          }
+        }
+
+        &.campaign03 {
+          @include bg("campaign03.png", center);
+          @include position(left, -36px, top, -8px);
+          background-size: cover;
+          width: rem(200);
+          height: rem(200);
+
+          @include responsive(D) {
+            @include position(left, -52px, top, -48px);
+            background-size: cover;
+            width: rem(350);
+            height: rem(350);
+          }
+        }
+      }
+
+      &__text {
+        @include responsive(T) {
+          margin-left: rem(160);
+        }
+
+        @include responsive(D) {
+          margin-left: 0;
+          margin-top: rem(264);
+        }
+
+        .title {
+          @include b3;
+          font-weight: 700;
+
+          @include responsive(T) {
+            @include h4;
+          }
+        }
+
+        .description {
+          @include b4;
+          color: $grey600;
+          margin-top: rem(12);
+
+          @include responsive(T) {
+            @include b3;
+          }
+        }
+      }
+
+      .btn-go {
+        @include b3;
+        color: $white;
+        background-color: $orange;
+        padding: rem(8) rem(16);
+        border-radius: rem(44);
+        flex-shrink: 0;
+        transition: 0.3s;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}

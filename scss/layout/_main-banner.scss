@@ -1,0 +1,62 @@
+.main-banner {
+  @include bg("banner-image.png", right);
+  position: relative;
+  height: rem(600);
+  background-size: cover;
+  margin-top: rem(84);
+
+  &__content {
+    @include position(left, rem(18), top, 50%);
+
+    .title {
+      @include h2;
+      color: $white;
+
+      @include responsive(D) {
+        @include h1;
+        color: $grey700;
+      }
+    }
+    .description {
+      @include b4;
+      color: $white;
+      margin-top: rem(48);
+
+      @include responsive(D) {
+        @include b1;
+        color: $grey700;
+      }
+    }
+
+    .app-icons {
+      margin-top: rem(24);
+
+      .btn-app {
+        width: rem(38);
+        height: rem(38);
+        border-radius: rem(38);
+        box-shadow: $shadow-6px;
+
+        @include responsive(T) {
+          width: rem(50);
+          height: rem(50);
+        }
+
+        &.apple {
+          @include bg("ico_apple.svg", center);
+          background-size: cover;
+          margin-right: rem(8);
+
+          @include responsive(D) {
+            margin-right: rem(12);
+          }
+        }
+
+        &.android {
+          @include bg("ico_android.svg", center);
+          background-size: cover;
+        }
+      }
+    }
+  }
+}

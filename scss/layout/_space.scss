@@ -1,0 +1,38 @@
+.mt {
+  &8 {
+    margin-top: rem(8);
+  }
+
+  &12 {
+    margin-top: rem(12);
+  }
+
+  &50 {
+    margin-top: rem(50);
+  }
+
+  &30 {
+    margin-top: rem(30);
+  }
+
+  &100 {
+    margin-top: rem(100);
+  }
+}
+
+.m {
+  &8 {
+    margin: 0 rem(8);
+  }
+
+  &16 {
+    margin: 0 rem(16);
+  }
+}
+
+.hr-line {
+  height: rem(12);
+  background-color: $greyf1;
+  opacity: 0.5;
+  border: none;
+}
