@@ -1,0 +1,30 @@
+.popup {
+    @include position(left, 10%, top, 20%);
+    display: none;
+    border: rem(1) solid $orange;
+
+    &__button__wrap {
+        background-color:$orange;
+        padding: rem(8);
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            background-color: transparent;
+            color: $white;
+            width: 50%;
+
+            &:first-child {
+                border-right: rem(1) solid $white;
+            }
+    
+
+        }
+        
+     
+    }
+
+    &.on {
+        display: block;
+    }
+}
