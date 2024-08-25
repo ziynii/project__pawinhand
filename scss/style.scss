@@ -14,14 +14,15 @@
 @import "base/typography"; // 타이포
 
 @import "component/title"; // 제목
+@import "component/popup"; // 팝업
 
 @import "layout/align"; // 정렬
 @import "layout/space"; // 여백
 @import "layout/header"; // 헤더
 @import "layout/footer"; // 푸터
 @import "layout/main-banner"; // 메인배너
-@import "layout/campaign"; // 메인배너
-@import "layout/mall"; // 메인배너
-@import "layout/review"; // 메인배너
-@import "layout/statistics"; // 메인배너
-@import "layout/activity"; // 메인배너
+@import "layout/campaign"; // 캠페인
+@import "layout/mall"; // 상품몰
+@import "layout/review"; // 입양후기
+@import "layout/statistics"; // 입양률
+@import "layout/activity"; // 활동
