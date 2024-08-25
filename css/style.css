@@ -294,6 +294,31 @@ body {
   }
 }
 
+.popup {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  display: none;
+  border: 0.1rem solid #f6951f;
+}
+.popup__button__wrap {
+  background-color: #f6951f;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+.popup__button__wrap button {
+  background-color: transparent;
+  color: #fff;
+  width: 50%;
+}
+.popup__button__wrap button:first-child {
+  border-right: 0.1rem solid #fff;
+}
+.popup.on {
+  display: block;
+}
+
 .align {
   display: flex;
 }
@@ -1130,4 +1155,4 @@ body {
     width: 29.7rem;
     height: 35rem;
   }
-}/*# sourceMappingURL=style.css.map */
+}
